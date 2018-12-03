@@ -1,0 +1,54 @@
+@{
+    Layout = null;
+}
+
+@model MvcTest.Models.Account
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width"/>
+</head>
+
+<body>
+    <form method="post" asp-controller="account" asp-action="save">
+        <table>
+            <tr>
+                <td>Username: </td>
+                <td>
+                    <input asp-for="Username" />
+                </td>
+                <td>
+                    <span asp-validation-for="Username"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    <input type="password" asp-for="Password" />
+                </td>
+                <td>
+                    <span asp-validation-for="Password"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <input asp-for="Email" />
+                </td>
+                <td>
+                    <span asp-validation-for="Email"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
